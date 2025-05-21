@@ -47,7 +47,7 @@
       "customType": "regex",
       "description": "Update etcd versions across the codebase",
       "managerFilePatterns": [
-        "^embedded-bins/Makefile\\.variables$"
+        "embedded-bins/Makefile.variables"
       ],
       "matchStrings": [
         "etcd_version = (?<currentValue>v?[\\d\\.]+)"
@@ -61,7 +61,8 @@
       "description": "Update kine versions across the codebase",
       "managerFilePatterns": [
         "/(^|/)[Mm]akefile(\\.[^/]+)?$/",
-        "/\\.(go|mk)$/"
+        "*.go",
+        "*.mk"
       ],
       "matchStrings": [
         "kine_version = (?<currentValue>[\\d\\.]+)",
