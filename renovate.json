@@ -4,10 +4,19 @@
     ":configMigration",
     ":gitSignOff"
   ],
-  "ignoreDeps": [
-    "*"
+  "enabledManagers": [
+    "gomod",
+    "regex",
+    "terraform"
   ],
   "packageRules": [
+    {
+      "description": "Ignore all Go dependencies by default",
+      "enabled": false,
+      "matchManagers": [
+        "gomod"
+      ]
+    },
     {
       "description": "Update etcd versions across the codebase",
       "enabled": true,
