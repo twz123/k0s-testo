@@ -30,16 +30,6 @@
         "go.etcd.io/etcd/**",
         "etcd-io/etcd"
       ]
-    },
-    {
-      "description": "Update kine versions across the codebase",
-      "enabled": true,
-      "matchManagers": [
-        "custom.regex"
-      ],
-      "matchPackageNames": [
-        "k3s-io/kine"
-      ]
     }
   ],
   "customManagers": [
