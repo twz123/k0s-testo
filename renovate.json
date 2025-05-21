@@ -71,8 +71,5 @@
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
     }
-  ],
-  "gomod": {
-    "enabled": true
-  }
+  ]
 }
