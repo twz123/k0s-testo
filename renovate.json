@@ -4,6 +4,9 @@
     ":configMigration",
     ":gitSignOff"
   ],
+  "ignoreDeps": [
+    "*"
+  ],
   "packageRules": [
     {
       "description": "Update etcd versions across the codebase",
@@ -27,13 +30,6 @@
       ],
       "matchPackageNames": [
         "k3s-io/kine"
-      ]
-    },
-    {
-      "description": "Disable all other updates",
-      "enabled": false,
-      "matchPackageNames": [
-        "**"
       ]
     }
   ],
