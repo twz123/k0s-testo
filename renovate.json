@@ -64,8 +64,8 @@
         "\\.(go|mk)$"
       ],
       "matchStrings": [
-        "kine_version = (?<currentValue>v?[\\d\\.]+)",
-        "\\bkine/blob/(?<currentValue>v?[\\d\\.]+)\\b"
+        "kine_version = (?<currentValue>[\\d\\.]+)",
+        "\\bkine/blob/(v?<currentValue>[\\d\\.]+)\\b"
       ],
       "depNameTemplate": "k3s-io/kine",
       "datasourceTemplate": "github-releases",
