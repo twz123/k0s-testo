@@ -28,6 +28,13 @@
       "matchPackageNames": [
         "k3s-io/kine"
       ]
+    },
+    {
+      "description": "Disable all other updates",
+      "enabled": false,
+      "matchPackageNames": [
+        "**"
+      ]
     }
   ],
   "customManagers": [
