@@ -7,8 +7,7 @@
   ],
   "enabledManagers": [
     "gomod",
-    "custom.regex",
-    "terraform"
+    "custom.regex"
   ],
   "packageRules": [
     {
@@ -62,8 +61,7 @@
       "description": "Update kine versions across the codebase",
       "managerFilePatterns": [
         "/(^|/)[Mm]akefile(\\.[^/]+)?$/",
-        "*.go",
-        "*.mk"
+        "*.go"
       ],
       "matchStrings": [
         "kine_version = (?<currentValue>[\\d\\.]+)",
