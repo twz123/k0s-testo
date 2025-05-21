@@ -6,7 +6,7 @@
   ],
   "enabledManagers": [
     "gomod",
-    "regex",
+    "custom.regex",
     "terraform"
   ],
   "packageRules": [
@@ -24,7 +24,7 @@
       "groupSlug": "etcd-all",
       "matchManagers": [
         "gomod",
-        "regex"
+        "custom.regex"
       ],
       "matchPackageNames": [
         "go.etcd.io/etcd/**",
@@ -35,7 +35,7 @@
       "description": "Update kine versions across the codebase",
       "enabled": true,
       "matchManagers": [
-        "regex"
+        "custom.regex"
       ],
       "matchPackageNames": [
         "k3s-io/kine"
@@ -59,9 +59,9 @@
     {
       "customType": "regex",
       "description": "Update kine versions across the codebase",
-      "fileMatch": [
-        "(^|/)[Mm]akefile(\\.[^/]+)?$",
-        "\\.(go|mk)$"
+      "managerFilePatterns": [
+        "/(^|/)[Mm]akefile(\\.[^/]+)?$/",
+        "/\\.(go|mk)$/"
       ],
       "matchStrings": [
         "kine_version = (?<currentValue>[\\d\\.]+)",
