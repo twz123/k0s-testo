@@ -25,16 +25,7 @@
         "etcd-io/etcd"
       ],
       "groupName": "etcd dependencies",
-      "groupSlug": "etcd-all"
-    },
-    {
-      "description": "Ensure etcd in Makefile uses github-releases and is enabled",
-      "matchManagers": [
-        "custom.regex"
-      ],
-      "matchPackageNames": [
-        "etcd-io/etcd"
-      ],
+      "groupSlug": "etcd-all",
       "enabled": true
     }
   ],
@@ -57,11 +48,11 @@
       "description": "Update kine versions across the codebase",
       "managerFilePatterns": [
         "/(^|/)[Mm]akefile(\\.[^/]+)?$/",
-        "*.go"
+        "**/*.go"
       ],
       "matchStrings": [
         "kine_version = (?<currentValue>[\\d\\.]+)",
-        "\\bkine/blob/(v?<currentValue>[\\d\\.]+)\\b"
+        "\\bkine/blob/v(?<currentValue>[\\d\\.]+)\\b"
       ],
       "depNameTemplate": "k3s-io/kine",
       "datasourceTemplate": "github-releases",
