@@ -15,8 +15,8 @@ jobs:
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v42.0.3
         with:
-          configurationFile: "renovate.json"
-          token: '${{ github.token }}'
+          configurationFile: renovate.json
+          token: "${{ secrets.GH_BACKPORT_TOKEN || github.token }}"
         env:
           LOG_LEVEL: debug
-          RENOVATE_AUTODISCOVER: true # Necessary for it to work on forks
+          RENOVATE_REPOSITORIES: "${{ github.repository }}"
