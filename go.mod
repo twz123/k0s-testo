@@ -53,10 +53,10 @@ require (
 	go.etcd.io/etcd/etcdutl/v3 v3.5.21
 	go.uber.org/zap v1.27.0
 	golang.org/x/crypto v0.38.0
-	golang.org/x/mod v0.24.0
+	golang.org/x/mod v0.25.0
 	golang.org/x/sync v0.15.0
 	golang.org/x/sys v0.33.0
-	golang.org/x/text v0.25.0
+	golang.org/x/text v0.26.0
 	golang.org/x/tools v0.33.0
 	google.golang.org/grpc v1.73.0
 	helm.sh/helm/v3 v3.18.2
