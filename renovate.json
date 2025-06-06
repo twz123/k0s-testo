@@ -7,8 +7,8 @@
   ],
   "gitAuthor": "Renovate Bot <renovate@whitesourcesoftware.com>",
   "enabledManagers": [
-    "gomod",
-    "custom.regex"
+    "custom.regex",
+    "gomod"
   ],
   "postUpdateOptions": [
     "gomodTidy"
@@ -37,6 +37,34 @@
     }
   ],
   "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update minimum Go version",
+      "managerFilePatterns": [
+        "**/go.mod"
+      ],
+      "matchStrings": [
+        "^go (?<currentValue>\\d+\\.\\d+)\\.0\\b"
+      ],
+      "depNameTemplate": "go",
+      "datasourceTemplate": "golang-version",
+      "extractVersionTemplate": "^(?<version>\\d+\\.\\d+)",
+      "versioningTemplate": "loose"
+    },
+    {
+      "customType": "regex",
+      "description": "Update Go toolchain version",
+      "managerFilePatterns": [
+        "**/*"
+      ],
+      "matchStrings": [
+        "\\bgo_version = (?<currentValue>\\d+(\\.\\d+){2})",
+        "\\bgolang/go/blob/go(?<currentValue>\\d+(\\.\\d+){2})"
+      ],
+      "depNameTemplate": "go",
+      "datasourceTemplate": "golang-version",
+      "versioningTemplate": "semver"
+    },
     {
       "customType": "regex",
       "description": "Update etcd version in embedded-bins/Makefile.variables",
