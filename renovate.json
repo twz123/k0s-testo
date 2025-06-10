@@ -10,6 +10,10 @@
   "labels": [
     "dependencies"
   ],
+  "baseBranches": [
+    "main",
+    "/^release-1\\.3[0-3]$/"
+  ],
   "enabledManagers": [
     "gomod",
     "custom.regex"
@@ -38,6 +42,26 @@
       ],
       "groupName": "etcd dependencies",
       "groupSlug": "etcd-all"
+    },
+    {
+      "description": "Only update the main branch by default",
+      "enabled": false,
+      "matchBaseBranches": [
+        "!main"
+      ]
+    },
+    {
+      "description": "Allow specific upgrades for release-1.33",
+      "enabled": true,
+      "matchBaseBranches": [
+        "release-1.33"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "matchDepNames": [
+        "go"
+      ]
     }
   ],
   "customManagers": [
