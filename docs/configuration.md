@@ -531,7 +531,7 @@ images:
   calico:
     kubecontrollers:
       image: quay.io/k0sproject/calico-kube-controllers
-      version: v3.27.3-0
+      version: v3.29.3-0
   metricsserver:
     image: quay.io/k0sproject/metrics-server
     version: v0.7.1-0
