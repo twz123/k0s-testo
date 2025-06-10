@@ -499,7 +499,7 @@ spec:
   images:
     coredns:
       image: quay.io/k0sproject/coredns
-      version: 1.12.1
+      version: 1.12.0
 ```
 
 If you want the list of default images and their versions to be included, use `k0s config create --include-images`.
@@ -534,7 +534,7 @@ images:
       version: v3.27.3-0
   metricsserver:
     image: quay.io/k0sproject/metrics-server
-    version: v0.7.2
+    version: v0.7.1-0
 ```
 
 In the runtime the image names are calculated as
