@@ -53,15 +53,17 @@
       ]
     },
     {
-      "description": "Bump Go for release-1.32",
+      "description": "Patch version bumps for release-1.32",
       "enabled": true,
       "matchBaseBranches": [
         "release-1.32"
       ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "matchDepNames": [
         "go"
-      ],
-      "allowedVersions": "<=1.23"
+      ]
     }
   ],
   "customManagers": [
