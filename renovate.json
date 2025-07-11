@@ -53,6 +53,19 @@
       ]
     },
     {
+      "description": "Patch version bumps for release-1.33",
+      "enabled": true,
+      "matchBaseBranches": [
+        "release-1.33"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "matchDepNames": [
+        "quay.io/k0sproject/envoy-distroless"
+      ]
+    },
+    {
       "description": "Patch version bumps for release-1.32",
       "enabled": true,
       "matchBaseBranches": [
@@ -62,7 +75,8 @@
         "patch"
       ],
       "matchDepNames": [
-        "go"
+        "go",
+        "quay.io/k0sproject/envoy-distroless"
       ]
     }
   ],
