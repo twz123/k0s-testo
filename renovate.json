@@ -61,7 +61,9 @@
       "matchDepNames": [
         "quay.io/k0sproject/envoy-distroless"
       ],
-      "allowedVersions": "<=1.32"
+      "matchUpdateTypes": [
+        "patch"
+      ]
     },
     {
       "description": "Bump Go for release-1.32",
