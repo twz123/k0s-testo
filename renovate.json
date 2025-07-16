@@ -164,7 +164,6 @@
         "[:=]\\s*[\"']?(?<currentValue>\\S+?)[\"']?\\s*#\\s*renovate:\\s*datasource=(?<datasource>\\S+)(\\s+registryUrl=(?<registryUrl>.+))?\\s+depName=(?<depName>\\S+)(\\s+versioning=(?<versioning>.+))?\n"
       ],
       "datasourceTemplate": "{{{datasource}}}",
-      "registryUrlTemplate": "{{#if registryUrl}}{{{registryUrl}}}{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "extractVersionTemplate": "^v?(?<version>.+)"
     }
