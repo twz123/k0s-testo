@@ -22,6 +22,7 @@
   "postUpdateOptions": [
     "gomodTidy"
   ],
+  "prHourlyLimit": 1000,
   "packageRules": [
     {
       "description": "Ignore all Go dependencies by default",
