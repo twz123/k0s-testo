@@ -57,6 +57,15 @@
       "groupSlug": "konnectivity"
     },
     {
+      "description": "Group all sonobuoy updates",
+      "enabled": true,
+      "matchPackageNames": [
+        "**/sonobuoy"
+      ],
+      "groupName": "sonobuoy dependencies",
+      "groupSlug": "sonobuoy"
+    },
+    {
       "description": "Only update the main branch by default",
       "enabled": false,
       "prTitleStrict": false,
