@@ -32,11 +32,7 @@
       ]
     },
     {
-      "description": "Group all etcd updates (go.mod and Makefile) into a single PR",
-      "matchManagers": [
-        "gomod",
-        "custom.regex"
-      ],
+      "description": "Group all etcd updates",
       "enabled": true,
       "matchPackageNames": [
         "go.etcd.io/etcd/**/v3",
@@ -44,6 +40,18 @@
       ],
       "groupName": "etcd dependencies",
       "groupSlug": "etcd-all"
+    },
+    {
+      "description": "Group all konnectivity updates",
+      "enabled": true,
+      "matchPackageNames": [
+        "**apiserver-network-proxy**"
+      ],
+      "matchDepTypes": [
+        "*"
+      ],
+      "groupName": "konnectivity dependencies",
+      "groupSlug": "konnectivity"
     },
     {
       "description": "Only update the main branch by default",
