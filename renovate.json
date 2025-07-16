@@ -45,8 +45,8 @@
       "description": "Group all konnectivity updates",
       "enabled": true,
       "matchPackageNames": [
-        "**/apiserver-network-proxy*",
-        "**/apiserver-network-proxy*/**"
+        "**/apiserver-network-proxy-agent",
+        "**/apiserver-network-proxy/**"
       ],
       "matchDepTypes": [
         "*"
