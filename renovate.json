@@ -45,7 +45,8 @@
       "description": "Group all konnectivity updates",
       "enabled": true,
       "matchDepNames": [
-        "**apiserver-network-proxy**"
+        "**/apiserver-network-proxy-agent",
+        "sigs.k8s.io/apiserver-network-proxy/konnectivity-client"
       ],
       "groupName": "konnectivity dependencies",
       "groupSlug": "konnectivity"
