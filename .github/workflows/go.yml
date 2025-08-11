@@ -60,7 +60,7 @@ jobs:
 
     steps:
       - name: "Workflow run :: Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
 
@@ -120,7 +120,7 @@ jobs:
 
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Generate SBOM
         run: |
@@ -159,7 +159,7 @@ jobs:
 
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
 
@@ -266,7 +266,7 @@ jobs:
           endpoint: builders
 
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # for `git describe`
           persist-credentials: false
@@ -376,7 +376,7 @@ jobs:
           endpoint: builders
 
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # for `git describe`
           persist-credentials: false
