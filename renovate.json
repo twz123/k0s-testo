@@ -31,6 +31,20 @@
       ]
     },
     {
+      "description": "Ignore some pinned dependencies",
+      "enabled": false,
+      "matchDatasources": [
+        "github-tags"
+      ],
+      "matchDepNames": [
+        "actions/cache",
+        "cilium/ebpf",
+        "euank/go-kmsg-parser",
+        "kubernetes/system-validators",
+        "projectcalico/calico"
+      ]
+    },
+    {
       "description": "Group all Kubernetes updates",
       "enabled": true,
       "matchPackageNames": [
