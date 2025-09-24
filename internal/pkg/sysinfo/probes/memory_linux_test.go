@@ -28,7 +28,7 @@ func TestTotalMemoryProber(t *testing.T) {
 	defer procMeminfo.Close()
 
 	// https://github.com/torvalds/linux/blob/v4.9/fs/proc/meminfo.c#L68
-	// https://github.com/torvalds/linux/blob/v2.6.28/fs/proc/meminfo.c#L56
+	// https://github.com/torvalds/linux/blob/v2.6.39/fs/proc/meminfo.c#L56
 	// https://github.com/torvalds/linux/blob/1da177e4c3f41524e886b7f1b8a0c1fc7321cac2/fs/proc/proc_misc.c#L149
 	re := regexp.MustCompile(`^\s*MemTotal\s*:\s*(\d+)\s*kB\s*$`)
 
