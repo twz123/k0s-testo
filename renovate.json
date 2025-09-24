@@ -80,6 +80,13 @@
       "groupSlug": "sonobuoy"
     },
     {
+      "description": "Enable selected go depenencies",
+      "enabled": true,
+      "matchDepNames": [
+        "containerd/containerd"
+      ]
+    },
+    {
       "description": "Run codegen if required",
       "matchDepNames": [
         "kubernetes-sigs/controller-tools"
