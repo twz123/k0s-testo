@@ -66,6 +66,7 @@
         "k8s.io/sample-apiserver",
         "k8s.io/sample-cli-plugin",
         "k8s.io/sample-controller",
+        "kubernetes/kube-proxy",
         "kubernetes/kubernetes",
         "quay.io/k0sproject/kube-proxy"
       ],
