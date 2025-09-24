@@ -218,7 +218,7 @@
       "matchStrings": [
         "\\bgithub.com/(?<depName>[a-z0-9][a-z0-9._-]+/[a-z0-9][a-z0-9._-]+)/blob/v(?<currentValue>[a-z0-9][a-z0-9._-]+)/"
       ],
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver"
     },
     {
