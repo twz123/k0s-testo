@@ -41,7 +41,8 @@
         "cilium/ebpf",
         "euank/go-kmsg-parser",
         "kubernetes/system-validators",
-        "projectcalico/calico"
+        "projectcalico/calico",
+        "torvalds/linux"
       ]
     },
     {
