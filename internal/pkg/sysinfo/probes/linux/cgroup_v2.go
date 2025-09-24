@@ -107,7 +107,7 @@ func attachDummyDeviceFilter(mountPoint string) (err error) {
 	if err != nil {
 		// RemoveMemlock may be required on kernels < 5.11
 		// observed on debian 11: 5.10.0-21-armmp-lpae #1 SMP Debian 5.10.162-1 (2023-01-21) armv7l
-		// https://github.com/cilium/ebpf/blob/v0.11.0/prog.go#L356-L360
+		// https://github.com/cilium/ebpf/blob/v0.19.0/prog.go#L356-L360
 		if errors.Is(err, unix.EPERM) && strings.Contains(err.Error(), "RemoveMemlock") {
 			if err2 := rlimit.RemoveMemlock(); err2 != nil {
 				err = errors.Join(err, err2)
@@ -135,7 +135,7 @@ func attachDummyDeviceFilter(mountPoint string) (err error) {
 // Returns true if the given error indicates that an eBPF program is unsupported
 // by the kernel.
 func eBPFProgramUnsupported(err error) bool {
-	// https://github.com/cilium/ebpf/blob/v0.11.0/features/prog.go#L43-L49
+	// https://github.com/cilium/ebpf/blob/v0.19.0/features/prog.go#L43-L49
 
 	switch {
 	// EINVAL occurs when attempting to create a program with an unknown type.
