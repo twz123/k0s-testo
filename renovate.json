@@ -143,11 +143,11 @@
         "go.mod"
       ],
       "matchStrings": [
-        "(?m)^go (?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "(?m)^go (?<currentValue>\\d+\\.\\d+)(?:\\.\\d+)?"
       ],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version",
-      "extractVersionTemplate": "^(?<version>\\d+\\.\\d+)",
+      "extractVersionTemplate": "{{currentValue}}",
       "versioningTemplate": "loose",
       "autoReplaceStringTemplate": "go {{newValue}}.0"
     },
