@@ -140,7 +140,7 @@
       "customType": "regex",
       "description": "Update minimum Go version",
       "managerFilePatterns": [
-        "**/go.mod"
+        "go.mod"
       ],
       "matchStrings": [
         "^go (?<currentValue>\\d+\\.\\d+)\\.\\d+\\b"
