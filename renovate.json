@@ -155,11 +155,11 @@
         "go.mod"
       ],
       "matchStrings": [
-        "(?m)^go (?<major>\\d+)\\.(?<minor>\\d+)(?:\\.(?<patch>\\d+))?"
+        "(?m)^go (?<currentValue>\\d+\\.\\d+)(?:\\.\\d+)?"
       ],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version",
-      "extractVersionTemplate": "{{major}}.{{minor}}",
+      "extractVersionTemplate": "{{currentValue}}",
       "versioningTemplate": "go-mod-directive",
       "autoReplaceStringTemplate": "go {{newValue}}.0"
     },
