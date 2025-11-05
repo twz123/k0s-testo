@@ -31,6 +31,31 @@
       ]
     },
     {
+      "description": "Prioritize Go directive updates",
+      "matchManagers": [
+        "regex"
+      ],
+      "matchDepNames": [
+        "go"
+      ],
+      "allowedVersions": "/^\\d+\\.\\d+(\\.0)?$/",
+      "prPriority": 100,
+      "prHourlyLimit": 0
+    },
+    {
+      "description": "Allow go directive via gomod",
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchDepNames": [
+        "go"
+      ],
+      "enabled": true,
+      "allowedVersions": "/^\\d+\\.\\d+(\\.0)?$/",
+      "prPriority": 100,
+      "prHourlyLimit": 0
+    },
+    {
       "description": "Group all etcd updates",
       "enabled": true,
       "matchPackageNames": [
@@ -143,12 +168,12 @@
         "go.mod"
       ],
       "matchStrings": [
-        "(?m)^go (?<currentValue>\\d+\\.\\d+)\\.\\d+"
+        "(?m)^go (?<currentValue>\\d+\\.\\d+(?:\\.\\d+)?)"
       ],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version",
-      "extractVersionTemplate": "{{currentValue}}.0",
-      "versioningTemplate": "semver",
+      "extractVersionTemplate": "{{currentValue}}",
+      "versioningTemplate": "go-mod-directive",
       "autoReplaceStringTemplate": "go {{newValue}}"
     },
     {
