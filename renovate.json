@@ -147,9 +147,9 @@
       ],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version",
-      "extractVersionTemplate": "{{currentValue}}",
-      "versioningTemplate": "loose",
-      "autoReplaceStringTemplate": "go {{newValue}}.0"
+      "extractVersionTemplate": "{{currentValue}}.0",
+      "versioningTemplate": "semver",
+      "autoReplaceStringTemplate": "go {{newValue}}"
     },
     {
       "customType": "regex",
