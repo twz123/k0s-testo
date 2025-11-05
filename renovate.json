@@ -38,20 +38,7 @@
       "matchDepNames": [
         "go"
       ],
-      "allowedVersions": "/^\\d+\\.\\d+(\\.0)?$/",
-      "prPriority": 100,
-      "prHourlyLimit": 0
-    },
-    {
-      "description": "Allow go directive via gomod",
-      "matchManagers": [
-        "gomod"
-      ],
-      "matchDepNames": [
-        "go"
-      ],
-      "enabled": true,
-      "allowedVersions": "/^\\d+\\.\\d+(\\.0)?$/",
+      "allowedVersions": "/^\\d+\\.\\d+$/",
       "prPriority": 100,
       "prHourlyLimit": 0
     },
@@ -168,13 +155,13 @@
         "go.mod"
       ],
       "matchStrings": [
-        "(?m)^go (?<currentValue>\\d+\\.\\d+(?:\\.\\d+)?)"
+        "(?m)^go (?<major>\\d+)\\.(?<minor>\\d+)(?:\\.(?<patch>\\d+))?"
       ],
       "depNameTemplate": "go",
       "datasourceTemplate": "golang-version",
-      "extractVersionTemplate": "{{currentValue}}",
+      "extractVersionTemplate": "{{major}}.{{minor}}",
       "versioningTemplate": "go-mod-directive",
-      "autoReplaceStringTemplate": "go {{newValue}}"
+      "autoReplaceStringTemplate": "go {{newValue}}.0"
     },
     {
       "customType": "regex",
