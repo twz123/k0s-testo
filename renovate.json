@@ -31,6 +31,16 @@
       ]
     },
     {
+      "description": "Group all Kubernetes updates",
+      "enabled": true,
+      "matchPackageNames": [
+        "k8s.io/*",
+        "quay.io/k0sproject/kube-proxy"
+      ],
+      "groupName": "Kubernetes dependencies",
+      "groupSlug": "kubernetes-all"
+    },
+    {
       "description": "Group all etcd updates",
       "enabled": true,
       "matchPackageNames": [
