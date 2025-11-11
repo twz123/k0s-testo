@@ -31,7 +31,19 @@
       ]
     },
     {
-      "description": "Kubernetes Go dependencies",
+      "description": "Kubernetes dependencies",
+      "enabled": true,
+      "matchPackageNames": [
+        "**/kubernetes",
+        "**/kube-proxy"
+      ],
+      "groupName": "Kubernetes dependencies",
+      "groupSlug": "kubernetes-all",
+      "respectLatest": false,
+      "ignoreUnstable": false
+    },
+    {
+      "description": "Kubernetes Go libraries",
       "enabled": true,
       "matchPackageNames": [
         "k8s.io/api",
@@ -71,18 +83,6 @@
       "groupSlug": "kubernetes-all",
       "ignoreUnstable": false,
       "respectLatest": false
-    },
-    {
-      "description": "Kubernetes non-Go dependencies",
-      "enabled": true,
-      "matchPackageNames": [
-        "kubernetes/*",
-        "**/kube-proxy"
-      ],
-      "groupName": "Kubernetes dependencies",
-      "groupSlug": "kubernetes-all",
-      "respectLatest": false,
-      "ignoreUnstable": false
     },
     {
       "description": "Group all etcd updates",
