@@ -295,7 +295,8 @@
         "\\bgithub.com/golang/(?<depName>go)/blob/go(?<currentValue>[^/]+)/"
       ],
       "datasourceTemplate": "{{#if (equals depName \"go\")}}golang-version{{else}}github-tags{{/if}}",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "semver",
+      "extractVersionTemplate": "^v?(?<version>.+)"
     },
     {
       "customType": "regex",
