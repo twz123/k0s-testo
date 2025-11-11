@@ -31,7 +31,7 @@
       ]
     },
     {
-      "description": "Group all Kubernetes updates",
+      "description": "Kubernetes Go dependencies",
       "enabled": true,
       "matchPackageNames": [
         "k8s.io/api",
@@ -64,7 +64,18 @@
         "k8s.io/pod-security-admission",
         "k8s.io/sample-apiserver",
         "k8s.io/sample-cli-plugin",
-        "k8s.io/sample-controller",
+        "k8s.io/sample-controller"
+      ],
+      "allowedVersions": "<1",
+      "groupName": "Kubernetes dependencies",
+      "groupSlug": "kubernetes-all",
+      "ignoreUnstable": false,
+      "respectLatest": false
+    },
+    {
+      "description": "Kubernetes non-Go dependencies",
+      "enabled": true,
+      "matchPackageNames": [
         "kubernetes/*",
         "**/kube-proxy"
       ],
