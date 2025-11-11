@@ -286,7 +286,7 @@ require (
 
 // Replacements duplicated from upstream Kubernetes
 replace (
-	// https://github.com/kubernetes/kubernetes/blob/v1.34.0/go.mod#L227-L259
+	// https://github.com/kubernetes/kubernetes/blob/v1.34.1/go.mod#L227-L259
 	k8s.io/api => k8s.io/api v0.34.0
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.34.0
 	k8s.io/apimachinery => k8s.io/apimachinery v0.34.0
