@@ -1076,7 +1076,7 @@ func (s *BootlooseSuite) initializeBootlooseClusterInDir(dir string) error {
 	}
 
 	// Ensure that kernel config is available in the bootloose boxes.
-	// See https://github.com/kubernetes/system-validators/blob/v1.6.0/validators/kernel_validator.go#L180-L190
+	// See https://github.com/kubernetes/system-validators/blob/v1.12.1/validators/kernel_validator.go#L180-L190
 
 	bindPaths := []string{
 		"/usr/src/linux/.config",
