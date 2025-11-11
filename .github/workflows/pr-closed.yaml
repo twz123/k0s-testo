@@ -5,7 +5,7 @@ on:
       - closed
 
 jobs:
-  # Based on https://github.com/actions/cache/blob/v4.2.0/tips-and-workarounds.md#force-deletion-of-caches-overriding-default-cache-eviction-policy
+  # Based on https://github.com/actions/cache/blob/v4.3.0/tips-and-workarounds.md#force-deletion-of-caches-overriding-default-cache-eviction-policy
   cleanup-actions-caches:
     name: Cleanup GitHub Actions caches
     runs-on: ubuntu-latest
