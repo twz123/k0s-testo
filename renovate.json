@@ -85,9 +85,7 @@
       ],
       "groupName": "Kubernetes dependencies",
       "groupSlug": "kubernetes-all",
-      "commitMessageAction": "Bump",
-      "commitMessageTopic": "Kubernetes",
-      "commitMessageExtra": "{{~#each upgrades}}{{~#if (equals depName \"k8s.io/kubernetes\")}}to {{{newVersion}}}{{/if}}{{/each~}}",
+      "commitMessage": "{{{commitMessagePrefix}}} Bump Kubernetes{{~#each upgrades}}{{~#if (equals depName \"k8s.io/kubernetes\")}} to {{{newVersion}}}{{/if}}{{/each~}} {{{commitMessageSuffix}}}",
       "ignoreUnstable": false,
       "respectLatest": false
     },
