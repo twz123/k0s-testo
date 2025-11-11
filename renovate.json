@@ -69,7 +69,9 @@
         "**/kube-proxy"
       ],
       "groupName": "Kubernetes dependencies",
-      "groupSlug": "kubernetes-all"
+      "groupSlug": "kubernetes-all",
+      "respectLatest": false,
+      "ignoreUnstable": false
     },
     {
       "description": "Group all etcd updates",
