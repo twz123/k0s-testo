@@ -34,16 +34,9 @@
       "description": "Kubernetes dependencies",
       "enabled": true,
       "matchPackageNames": [
-        "**/kubernetes",
+        "kubernetes/**",
         "**/kube-proxy"
-      ],
-      "groupName": "Kubernetes dependencies",
-      "groupSlug": "kubernetes-all",
-      "commitMessageAction": "Bump",
-      "commitMessageTopic": "Kubernetes",
-      "commitMessageExtra": "{{~#each upgrades}}{{~#if (equals depName \"k8s.io/kubernetes\")}}to {{{newVersion}}}{{/if}}{{/each~}}",
-      "respectLatest": false,
-      "ignoreUnstable": false
+      ]
     },
     {
       "description": "Kubernetes Go libraries",
@@ -81,9 +74,20 @@
         "k8s.io/sample-cli-plugin",
         "k8s.io/sample-controller"
       ],
-      "allowedVersions": "/^v0\\./",
+      "allowedVersions": "/^v0\\./"
+    },
+    {
+      "description": "Group Kubernetes dependencies",
+      "matchPackageNames": [
+        "k8s.io/**",
+        "kubernetes/**",
+        "**/kube-proxy"
+      ],
       "groupName": "Kubernetes dependencies",
       "groupSlug": "kubernetes-all",
+      "commitMessageAction": "Bump",
+      "commitMessageTopic": "Kubernetes",
+      "commitMessageExtra": "{{~#each upgrades}}{{~#if (equals depName \"k8s.io/kubernetes\")}}to {{{newVersion}}}{{/if}}{{/each~}}",
       "ignoreUnstable": false,
       "respectLatest": false
     },
