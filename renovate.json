@@ -78,7 +78,7 @@
         "k8s.io/sample-cli-plugin",
         "k8s.io/sample-controller"
       ],
-      "allowedVersions": "/^0\\./",
+      "allowedVersions": "/^v0\\./",
       "groupName": "Kubernetes dependencies",
       "groupSlug": "kubernetes-all",
       "ignoreUnstable": false,
