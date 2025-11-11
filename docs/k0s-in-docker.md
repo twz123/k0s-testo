@@ -146,7 +146,7 @@ application containers to separate workers.
      The kubelet's OOM watcher uses this.
      <!--
        Note that this used to work via `-v /dev/kmsg:/dev/kmsg:ro --device-cgroup-rule='c 1:11 r'` as well.
-       Upstream reference: https://github.com/euank/go-kmsg-parser/blob/v2.0.0/kmsgparser/kmsgparser.go#L60
+       Upstream reference: https://github.com/euank/go-kmsg-parser/blob/v3.0.0/kmsgparser/kmsgparser.go#L60
        Also relevant: KubeletInUserNamespace feature gate (alpha since v1.22)
        https://kubernetes.io/docs/tasks/administer-cluster/kubelet-in-userns/
      -->
