@@ -37,6 +37,13 @@
       ]
     },
     {
+      "description": "Disable python-version datasource to avoid python.org throttling aborts",
+      "enabled": false,
+      "matchDatasources": [
+        "python-version"
+      ]
+    },
+    {
       "description": "Kubernetes",
       "enabled": true,
       "matchPackageNames": [
