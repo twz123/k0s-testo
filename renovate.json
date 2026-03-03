@@ -318,8 +318,7 @@
       ],
       "matchUpdateTypes": [
         "patch"
-      ],
-      "allowedVersions": "/^v?[01]\\.34\\./"
+      ]
     },
     {
       "description": "Bump etcd for release-1.33",
@@ -357,8 +356,7 @@
       ],
       "matchUpdateTypes": [
         "patch"
-      ],
-      "allowedVersions": "/^v?[01]\\.33\\./"
+      ]
     }
   ],
   "customManagers": [
