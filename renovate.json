@@ -21,6 +21,10 @@
   "vulnerabilityAlerts": {
     "enabled": false
   },
+  "separateMajorMinor": true,
+  "separateMultipleMajor": true,
+  "separateMultipleMinor": true,
+  "separateMinorPatch": true,
   "enabledManagers": [
     "gomod",
     "custom.regex"
