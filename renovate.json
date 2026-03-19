@@ -134,7 +134,7 @@
       "enabled": true,
       "matchDepNames": [
         "containerd/containerd",
-        "github.com/containerd/containerd"
+        "/^github.com\\/containerd\\/containerd(\\/v[0-9]+)?$/"
       ],
       "groupName": "containerd",
       "groupSlug": "containerd"
