@@ -132,7 +132,7 @@
     {
       "description": "Group all containerd bumps",
       "enabled": true,
-      "matchDepNames": [
+      "matchPackageNames": [
         "containerd/containerd",
         "/^github.com\\/containerd\\/containerd(\\/v[0-9]+)?$/"
       ],
