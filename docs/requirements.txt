@@ -7,7 +7,7 @@ colorama==0.4.6
 ghp-import==2.1.0
 idna==3.11
 importlib-metadata==9.0.0
-importlib-resources==6.5.2
+importlib-resources==7.1.0
 Jinja2==3.1.6
 Markdown==3.10.2
 MarkupSafe==3.0.3
