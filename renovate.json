@@ -23,6 +23,7 @@
   },
   "enabledManagers": [
     "gomod",
+    "terraform",
     "custom.regex"
   ],
   "postUpdateOptions": [
