@@ -178,7 +178,8 @@
         "sigs.k8s.io/apiserver-network-proxy/*"
       ],
       "groupName": "konnectivity",
-      "groupSlug": "konnectivity"
+      "groupSlug": "konnectivity",
+      "commitMessageExtra": "{{~#if (includes (lookupArray upgrades \"depName\") \"kubernetes-sigs/apiserver-network-proxy\")}}{{~#each upgrades}}{{~#if (equals depName \"kubernetes-sigs/apiserver-network-proxy\")}} to {{{prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#if isSingleVersion}} to {{{prettyNewVersion}}}{{/if}}{{/if~}}"
     },
     {
       "description": "Group all Helm bumps",
@@ -198,6 +199,16 @@
       ],
       "groupName": "sonobuoy",
       "groupSlug": "sonobuoy"
+    },
+    {
+      "description": "Group all Traefik bumps",
+      "enabled": true,
+      "matchDepNames": [
+        "**/traefik"
+      ],
+      "groupName": "Traefik",
+      "groupSlug": "traefik",
+      "commitMessageExtra": "{{~#if (includes (lookupArray upgrades \"depName\") \"quay.io/k0sproject/traefik\")}}{{~#each upgrades}}{{~#if (equals depName \"quay.io/k0sproject/traefik\")}} to {{{replace \"-k0s\\\\.\\\\d+$\" \"\" prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#if isSingleVersion}} to {{{replace \"-k0s\\\\.\\\\d+$\" \"\" prettyNewVersion}}}{{/if}}{{/if~}}"
     },
     {
       "description": "Run codegen if required",
