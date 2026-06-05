@@ -179,7 +179,7 @@
       ],
       "groupName": "konnectivity",
       "groupSlug": "konnectivity",
-      "commitMessageExtra": "{{~#if (includes (lookupArray upgrades \"depName\") \"kubernetes-sigs/apiserver-network-proxy\")}}{{~#each upgrades}}{{~#if (equals depName \"kubernetes-sigs/apiserver-network-proxy\")}} to {{{prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#if isSingleVersion}} to {{{prettyNewVersion}}}{{/if}}{{/if~}}"
+      "commitMessageExtra": "{{~#if (includes (lookupArray upgrades \"depName\") \"kubernetes-sigs/apiserver-network-proxy\")}}{{~#each upgrades}}{{~#if (equals depName \"kubernetes-sigs/apiserver-network-proxy\")}} to {{{prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#if (includes (lookupArray upgrades \"depName\") \"sigs.k8s.io/apiserver-network-proxy/konnectivity-client\")}}{{~#each upgrades}}{{~#if (equals depName \"sigs.k8s.io/apiserver-network-proxy/konnectivity-client\")}} to {{{prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#each upgrades}}{{~#if (equals depName \"quay.io/k0sproject/apiserver-network-proxy-agent\")}} to {{{replace \"-k0s\\.\\d+$\" \"\" prettyNewVersion}}}{{/if}}{{/each~}}{{/if}}{{/if~}}"
     },
     {
       "description": "Group all Helm bumps",
@@ -208,7 +208,7 @@
       ],
       "groupName": "Traefik",
       "groupSlug": "traefik",
-      "commitMessageExtra": "{{~#if (includes (lookupArray upgrades \"depName\") \"quay.io/k0sproject/traefik\")}}{{~#each upgrades}}{{~#if (equals depName \"quay.io/k0sproject/traefik\")}} to {{{replace \"-k0s\\\\.\\\\d+$\" \"\" prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#if isSingleVersion}} to {{{replace \"-k0s\\\\.\\\\d+$\" \"\" prettyNewVersion}}}{{/if}}{{/if~}}"
+      "commitMessageExtra": "{{~#if (includes (lookupArray upgrades \"depName\") \"docker.io/library/traefik\")}}{{~#each upgrades}}{{~#if (equals depName \"docker.io/library/traefik\")}} to {{{prettyNewVersion}}}{{/if}}{{/each~}}{{~else}}{{~#each upgrades}}{{~#if (equals depName \"quay.io/k0sproject/traefik\")}} to {{{replace \"-k0s\\.\\d+$\" \"\" prettyNewVersion}}}{{/if}}{{/each~}}{{/if~}}"
     },
     {
       "description": "Run codegen if required",
